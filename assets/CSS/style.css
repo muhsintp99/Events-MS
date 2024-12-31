@@ -1,0 +1,229 @@
+/* Importing fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--default-font);
+}
+
+:root {
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway", sans-serif;
+  --nav-font: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #C02729;
+  --secondary-color: #343A40;
+  --heading-color: #212529;
+  --accent-color: #FFC107;
+  --background-gradient: linear-gradient(135deg, #C02729, #343A40);
+  --default-color: #ffffff;
+  --contrast-color: #F8F9FA;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--default-color);
+  background-color: var(--default-color);
+  font-family: var(--default-font);
+}
+
+/* navbar section */
+.main-subheader {
+  /* background-color: var(--primary-color); */
+  background-color: color-mix(in srgb, var(--primary-color), transparent 20%);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  color: var(--contrast-color);
+}
+
+.logo-name {
+  color: var(--primary-color);
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.logo-name-2nd {
+  color: var(--heading-color);
+}
+
+.navBar-button-menu {
+  border: none;
+}
+
+.menu-icon {
+  color: var(--primary-color);
+}
+
+.menu-icon-close {
+  color: var(--primary-color);
+}
+
+.a-link {
+  color: var(--accent-color);
+}
+
+.header-list .nav-item .nav-link {
+  /* color: var(--primary-color); */
+  font-weight: 520;
+  letter-spacing: .5px;
+}
+
+.nav-link:active {
+  color: var(--primary-color);
+}
+
+.btn-login {
+  /* background-color: var(--primary-color); */
+  background-color: color-mix(in srgb, var(--primary-color), transparent 20%);
+  border: none;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in-out;
+  color: var(--default-color);
+  text-decoration: none;
+  box-shadow: #212529;
+}
+
+.btn-login:hover {
+  background-color: darken(var(--primary-color), 10%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: var(--heading-color);
+}
+
+.banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.8)), url('https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center center/cover;
+  height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.banner-content {
+  animation: fadeIn 2s ease-in-out;
+  max-width: 900px;
+  padding: 20px;
+  text-align: center;
+}
+
+.banner h1 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.banner p {
+  font-size: 1.2rem;
+}
+
+.banner .fs-4 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+.banner .btn-outline-light {
+  border: 2px solid #fff;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.banner .btn-outline-light:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.banner .badge {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.banner a {
+  border-radius: 25px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .banner h1 {
+    font-size: 2.5rem;
+  }
+
+  .banner p {
+    font-size: 1rem;
+  }
+
+  .banner .fs-4 {
+    font-size: 1.2rem;
+  }
+
+  .banner a {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
+
+/* ---------------------end header & Banner---------------- */
+
+
+/*--------------------------------------------------------------
+# Scroll Top Button
+--------------------------------------------------------------*/
+.scroll-top{
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 10px;
+  z-index: 99999;
+  margin: 20px;
+  height: 50px;
+  width: 50px;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  transition: all 0.4s;
+  text-decoration: none;
+}
+
+.scroll-top i {
+  font-size: 24px;
+  color: var(--default-color);
+  line-height: 0;
+  /* font-weight: 400; */
+  list-style: none;
+}
+
+.scroll-top:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+}
+
+.scroll-top.active {
+  visibility: visible;
+  opacity: 1;
+  bottom: 15px;
+}
+
