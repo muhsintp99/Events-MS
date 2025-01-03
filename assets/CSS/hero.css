@@ -254,6 +254,85 @@
 
 
 /*--------------------------------------------------------------
+# service Section
+--------------------------------------------------------------*/
+
+.service {
+    margin-top: 2.5rem;
+    margin-bottom: 3.1rem;
+    padding-bottom: 3.1rem;
+}
+
+.service .stat-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.service .stat-item .stat-icon {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: color-mix(in srgb, var(--primary-color), transparent 92%);
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.service .stat-item .stat-icon i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.service .stat-item:hover .stat-icon {
+    background-color: var(--primary-color);
+}
+
+.service .stat-item:hover .stat-icon i {
+    color: var(--default-color);
+}
+
+.service .stat-item .stat-content {
+    flex-grow: 1;
+}
+
+.service .stat-item .stat-content h4 {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--heading-color );
+}
+
+.service .stat-item .stat-content p {
+    font-size: 0.875rem;
+    color: color-mix(in srgb, var(--secondary-color), transparent 40%);
+    margin: 0;
+}
+
+.service .stat-item .stat-content .read-more {
+    font-size: 0.875rem;
+    color: color-mix(in srgb, var(--primary-color), transparent 10%);
+    margin: 0;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    border: none;
+}
+
+.service .stat-item .stat-content .read-more:hover {
+    color: color-mix(in srgb, var(--primary-color), transparent 30%);
+}
+
+
+@media (max-width: 575px) {
+    .service .stat-item {
+        padding: 1.5rem;
+    }
+}
+
+/*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
 .about {
@@ -404,10 +483,11 @@
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
-.contact{
+.contact {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 }
+
 .contact .info-box {
     background-color: color-mix(in srgb, var(--primary-color), transparent 92%);
     color: var(--secondary-color);
@@ -576,7 +656,6 @@
 /*--------------------------------------------------------------
 # Footer Section
 --------------------------------------------------------------*/
-.footer{
+.footer {
     padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
 }

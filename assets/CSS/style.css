@@ -190,9 +190,122 @@ body {
 
 
 /*--------------------------------------------------------------
+# Footer Section 
+--------------------------------------------------------------*/
+
+footer {
+  background-color: var(--heading-color);
+  color: var(--contrast-color);
+  padding: 40px 0 8px;
+}
+
+footer .navbar-brand {
+  text-decoration: none;
+}
+
+footer .navbar-brand .logo-name {
+  color: var(--primary-color);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+footer .navbar-brand .logo-name-2nd {
+  color: var(--contrast-color);
+}
+
+footer a {
+  color: var(--contrast-color);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+  letter-spacing: .4px;
+}
+
+footer .social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .social-icons .icon-box {
+  width: 3rem;
+  height: 3rem;
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 0%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: 0.3s;
+}
+
+footer .social-icons .icon-box i {
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+footer .social-icons .icon-box:hover {
+  background-color: color-mix(in srgb, var(--contrast-color), transparent 70%);
+}
+
+footer .social-icons {
+  flex-direction: row;
+  gap: 15px;
+}
+
+footer .social-icons a {
+  text-decoration: none;
+  color: var(--contrast-color);
+  /* margin-right: 15px; */
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+footer .social-icons a:hover {
+  color: color-mix(in srgb, var(--secondary-color), transparent 40%);
+}
+
+footer h6 {
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+footer .contact-info p {
+  margin-bottom: .6rem;
+}
+
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: color-mix(in srgb, var(--contrast-color), transparent 20%);
+}
+
+@media (max-width: 576px) {
+  footer .social-icons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  footer .copyright {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
-.scroll-top{
+.scroll-top {
   position: fixed;
   visibility: hidden;
   opacity: 0;
@@ -226,4 +339,3 @@ body {
   opacity: 1;
   bottom: 15px;
 }
-
