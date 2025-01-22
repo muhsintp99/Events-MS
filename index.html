@@ -34,7 +34,10 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./assets/CSS/style.css">
   <link rel="stylesheet" href="./assets/CSS/hero.css">
-  <title>EventTribe</title>
+  <link rel="stylesheet" href="./assets/CSS/upevent.css">
+  <link rel="stylesheet" href="./assets/CSS/joinwith.css">
+  <link rel="shortcut icon" href="./assets/images/logos/Event.png" type="image/x-icon">
+  <title>EventTribes.</title>
 </head>
 
 <body>
@@ -71,7 +74,7 @@
     <nav id="navbar-example2" class="navbar navbar-expand-lg py-3">
       <div class="container">
         <a class="navbar-brand " href="./index.html"><img src="images/logo.png" alt="">
-          <span class="logo-name">Event<span class="logo-name-2nd">Tribe.</span>
+          <span class="logo-name">Event<span class="logo-name-2nd">Tribes.</span>
           </span>
         </a>
         <button class="navbar-toggler text-white navBar-button-menu" type="button" data-bs-toggle="offcanvas"
@@ -89,13 +92,14 @@
           <div class="offcanvas-body">
             <ul class="navbar-nav align-items-center flex-grow-1 justify-content-end header-list">
               <li class="nav-item"><a class="nav-link active me-md-4" href="#">Home</a></li>
-              <li class="nav-item"><a class="nav-link me-md-4" href="#">About Us</a></li>
-              <li class="nav-item"><a class="nav-link me-md-4" href="#">Service</a></li>
+              <li class="nav-item"><a class="nav-link me-md-4" href="#about">About Us</a></li>
+              <li class="nav-item"><a class="nav-link me-md-4" href="#event-all">Events</a></li>
+              <li class="nav-item"><a class="nav-link me-md-4" href="#service-all">Service</a></li>
               <li class="nav-item"><a class="nav-link me-md-4" href="#">Partner</a></li>
-              <li class="nav-item"><a class="nav-link me-md-4" href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link me-md-4" href="#contact">Contact</a></li>
               <li class="nav-item">
                 <div data-aos="fade-left">
-                  <a class="btn-login shadow-sm" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                  <a class="btn-login shadow-sm" href="./login.html#loginModal">
                     Login
                   </a>
                 </div>
@@ -246,17 +250,244 @@
   <!-- ended to About Us-->
 
   <!-- startrd to Events-->
-  <section class="Events"></section>
+  <section class=" Events container py-4" id="event-all">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-8">
+        <div class="row p-1 g-3 Filters mb-2">
+          <div class="col-md-6 col-sm-12 m-0 d-flex align-items-center  search-text-input search-input">
+            <input type="text" id="searchInput" class="form-control shadow-sm" placeholder="Search events...">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="col-md-6 col-sm-12 m-0 d-flex justify-content-md-end justify-content-center align-items-center">
+            <div class="grid-row">
+              <button class="btn btn-outline-primary shadow  active" id="gridBtn">
+                <i class="fa-regular fa-square"></i> Grid
+              </button>
+              <button class="btn btn-outline-primary shadow " id="rowBtn">
+                <i class="fa fa-list"></i> Row
+              </button>
+            </div>
+            <div class="dropdown ms-2">
+              <button class="btn btn-secondary dropdown-toggle shadow " type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-filter"></i>
+                Filters
+              </button>
+              <div class="dropdown-menu">
+                <div class="filter-content p-2">
+                  <!-- Price Range Section -->
+                  <div class="filter-section">
+                    <h6>Price Range</h6>
+                    <div class="checkbox-group price-group" id="priceFilter">
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="0-1000" id="price1">
+                        <label class="form-check-label" for="price1">₹0 - ₹1,000</label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="1001-2000" id="price2">
+                        <label class="form-check-label" for="price2">₹1,001 -
+                          ₹2,000</label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="2001-3000" id="price3">
+                        <label class="form-check-label" for="price3">₹2,001 -
+                          ₹3,000</label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="3001+" id="price4">
+                        <label class="form-check-label" for="price4">Above
+                          ₹3,000</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Date Range Section -->
+                  <div class="filter-section">
+                    <h6>Date Range</h6>
+                    <div class="checkbox-group date-group" id="dateFilter">
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="today" id="date1">
+                        <label class="form-check-label" for="date1">Today</label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="week" id="date2">
+                        <label class="form-check-label" for="date2">This Week</label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="month" id="date3">
+                        <label class="form-check-label" for="date3">This Month</label>
+                      </div>
+                      <div class="form-check m-0">
+                        <input class="form-check-input" type="checkbox" value="future" id="date4">
+                        <label class="form-check-label" for="date4">Future
+                          Events</label>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Clear Button -->
+                  <div class="filter-footer pt-2">
+                    <button class="btn btn-secondary w-100" onclick="resetFilters()">Clear
+                      All</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id="eventContainer" class="event-container grid-view pt-2 event-main-card">
+            <div class="row" id="eventsContent"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12 col-lg-4 mt-md-2 ">
+        <div class="Upcoming">
+          <div id="eventGrid"></div>
+        </div>
+
+        <div class="container-fluid v" style="margin-top: 10px; padding: 0;">
+          <video width="100%" autoplay muted loop>
+            <source src="assets/video/demo-ads.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
   <!-- ended to Events-->
 
   <!-- startrd to Partner-->
-  <section class="join-with-us"></section>
-  <!-- ended to Partner-->
+  <section class="Join-with-us">
+    <div class="container">
+      <h3 class="text-center mb-5">Ready To Get Started...?</h3>
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="https://images.pexels.com/photos/1181304/pexels-photo-1181304.jpeg" class="card-img-top"
+              alt="Event Management">
+            <div class="card-body">
+              <div class="card-content">
+                <h5 class="card-subtitle">"Expand Your Reach, Streamline Your Events"</h5>
+                <!-- <h4 class="card-title">Why Choose Us..?</h4> -->
+                <div class="features-container">
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Increase Visibility</div>
+                      <p class="mb-0">Connect with engaged users searching for events.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Simplify Event Management</div>
+                      <p class="mb-0">Manage tickets and attendees in one place.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Boost Your Brand</div>
+                      <p class="mb-0">Build trust with ratings and reviews.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-explore">
+                Explore Now <i class="fa-solid fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-lg-4">
+          <div class="card">
+            <img
+              src="https://images.pexels.com/photos/2177814/pexels-photo-2177814.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              class="card-img-top" alt="Creative Events">
+            <div class="card-body">
+              <div class="card-content">
+                <h5 class="card-subtitle">"Bring Your Creative Events to Life"</h5>
+                <!-- <h4 class="card-title">Why Join Us..?</h4> -->
+                <div class="features-container">
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Reach a Larger Audience</div>
+                      <p class="mb-0">Connect with eager event seekers.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Hassle-Free Event Creation</div>
+                      <p class="mb-0">Create and customize events quickly.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Earn More</div>
+                      <p class="mb-0">Boost revenue with flexible ticketing.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-explore">
+                Explore Now <i class="fa-solid fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-lg-4">
+          <div class="card">
+            <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg" class="card-img-top"
+              alt="Event Discovery">
+            <div class="card-body">
+              <div class="card-content">
+                <h5 class="card-subtitle">"Discover and Book the Best Events Near You"</h5>
+                <!-- <h4 class="card-title">Why Choose Us..?</h4> -->
+                <div class="features-container">
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Find Events You Love</div>
+                      <p class="mb-0">Discover exciting local events easily.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Fast, Secure Booking</div>
+                      <p class="mb-0">Book your spot in just a few clicks.</p>
+                    </div>
+                  </div>
+                  <div class="feature-item">
+                    <i class="fa-solid fa-hand-holding-heart feature-icon"></i>
+                    <div class="feature-text">
+                      <div class="feature-title">Exclusive Offers</div>
+                      <p class="mb-0">Get early access and special deals.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-explore">
+                Explore Now <i class="fa-solid fa-arrow-right ms-2"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> <!-- ended to Partner-->
 
   <!-- startrd to Service -->
-  <section class="service">
+  <section class="service" id="service-all">
     <div class="container">
-      <div class="row event-management-system gy-4 mt-5" data-aos="fade-up" data-aos-delay="500">
+      <div class="row event-management-system gy-4 mt-3" data-aos="fade-up" data-aos-delay="500">
         <!-- Event Planning -->
         <div class="col-lg-4 col-md-6">
           <div class="stat-item">
@@ -585,4 +816,5 @@
 
   <script src="./assets/JS/owlCarousel.js"></script>
   <script src="./assets/JS/index.js"></script>
+  <script src="./assets/JS/event.js"></script>
 </body>

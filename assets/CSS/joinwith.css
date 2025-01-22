@@ -1,0 +1,143 @@
+:root {
+    --primary-color: #C02729;
+    --secondary-color: #343A40;
+    --heading-color: #212529;
+    --accent-color: #FFC107;
+    --background-gradient: linear-gradient(135deg, #C02729, #343A40);
+    --background-gradient-45: linear-gradient(45deg, #C02729, #343A40);
+    --default-color: #ffffff;
+    --contrast-color: #F8F9FA;
+}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--default-color);
+    background-color: var(--default-color);
+    font-family: var(--default-font);
+}
+
+.Join-with-us {
+    margin-top: 2.5rem;
+    /* margin-bottom: 3.1rem; */
+    /* padding-bottom: 3.1rem; */
+}
+
+.Join-with-us h3 {
+    color: var(--heading-color);
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.Join-with-us .card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.Join-with-us .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.Join-with-us .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.Join-with-us .card-body {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Join-with-us .card-content {
+    flex: 1;
+}
+
+.Join-with-us .card-subtitle {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    min-height: 3.3rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.Join-with-us .features-container {
+    margin-bottom: 2rem;
+}
+
+.Join-with-us .feature-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.Join-with-us .feature-item i {
+    color: var(--default-color);
+    background-color: color-mix(in srgb, var(--primary-color), transparent 20%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.Join-with-us .feature-icon {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+
+.Join-with-us .feature-text {
+    flex: 1;
+}
+
+.Join-with-us .feature-title {
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: var(--secondary-color);
+}
+
+.Join-with-us .btn-explore {
+    background: var(--background-gradient-45);
+    color: var(--contrast-color);
+    border: none;
+    padding: 0.50rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.Join-with-us .btn-explore i {
+    padding: 8px;
+    background: var(--default-color);
+    color: var(--primary-color);
+    border-radius: 50%;
+}
+
+.Join-with-us .btn-explore:hover {
+    opacity: 0.9;
+    color: var(--contrast-color);
+}
+
+@media (max-width: 991px) {
+    .card {
+        margin-bottom: 2rem;
+    }
+}

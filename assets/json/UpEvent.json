@@ -1,0 +1,70 @@
+{
+    "upevents": [
+      {
+        "id": 1,
+        "title": "Digital Innovation Summit",
+        "date": "2025-03-15",
+        "time": { "start": "9:00 AM", "end": "6:00 PM" },
+        "isUpcoming": true,
+        "image": "https://img.freepik.com/free-vector/digital-transformation-abstract-concept-illustration_335657-4306.jpg",
+        "venue": "Tech Hub Convention Center, Bangalore",
+        "place": "Bangalore",
+        "organizer": "Digital Futures Inc.",
+        "tags": ["Technology"],
+        "lastUpdated": "02-02-2025"
+      },
+      {
+        "id": 2,
+        "title": "Green Energy Expo 2025",
+        "date": "2025-04-20",
+        "time": { "start": "10:00 AM", "end": "5:00 PM" },
+        "isUpcoming": true,
+        "image": "https://img.freepik.com/free-vector/green-energy-concept-illustration_114360-5432.jpg",
+        "venue": "Eco Convention Center, Mumbai",
+        "place": "Mumbai",
+        "organizer": "Susta Future Foundation",
+        "tags": ["Sustainability"],
+        "lastUpdated": "06-02-2025"
+      },
+      {
+        "id": 3,
+        "title": "Global Food Festival",
+        "date": "2025-05-10",
+        "time": { "start": "11:00 AM", "end": "9:00 PM" },
+        "isUpcoming": true,
+        "image": "https://img.freepik.com/free-vector/street-food-festival-concept-illustration_114360-8593.jpg",
+        "venue": "International Food Court, Delhi",
+        "place": "Delhi",
+        "organizer": "World Cuisine Events",
+        "tags": ["Food"],
+        "lastUpdated": "19-02-2025"
+      },
+      {
+        "id": 4,
+        "title": "Wellness & Yoga Retreat",
+        "date": "2025-06-05",
+        "time": { "start": "7:00 AM", "end": "8:00 PM" },
+        "isUpcoming": true,
+        "image": "https://img.freepik.com/free-vector/organic-flat-people-meditating-illustration_23-2148906557.jpg",
+        "venue": "Serenity Resort, Goa",
+        "place": "Goa",
+        "organizer": "Mind & Body Wellness",
+        "tags": ["Wellness"],
+        "lastUpdated": "30-03-2025"
+      },
+      {
+        "id": 5,
+        "title": "Enter Summit 2025",
+        "date": "2025-07-12",
+        "time": { "start": "9:30 AM", "end": "7:00 PM" },
+        "isUpcoming": true,
+        "image": "https://img.freepik.com/free-vector/business-team-discussing-ideas-startup_74855-4380.jpg",
+        "venue": "Business Center, Hyderabad",
+        "place": "Hyderabad",
+        "organizer": "Startup India Initiative",
+        "tags": ["Business"],
+        "lastUpdated": "20-03-2025"
+      }
+    ]
+  }
+  

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="EventTribe connects you with top event providers, offering seamless event planning solutions.">
+    <title>Login - EventTribes</title>
+    <link rel="shortcut icon" href="./assets/images/logos/Event.png" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #C02729;
+            --secondary-color: #343A40;
+            --heading-color: #212529;
+            --accent-color: #FFC107;
+            --background-gradient: linear-gradient(135deg, #C02729, #343A40);
+            --default-color: #ffffff;
+            --contrast-color: #F8F9FA;
+            --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            --heading-font: "Raleway", sans-serif;
+            --nav-font: "Poppins", sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            background: var(--background-gradient);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--default-font);
+        }
+
+        .login-container {
+            background: var(--default-color);
+            padding: 2.5rem;
+            border-radius: 1rem;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+            width: 90%;
+            max-width: 420px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+            margin-bottom: 12px;
+        }
+
+        .login-container .logo-name {
+            color: var(--primary-color);
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        .login-container .logo-name-2nd {
+            color: var(--heading-color);
+        }
+
+
+        h4 {
+            color: var(--heading-color);
+            font-family: var(--heading-font);
+            text-align: center;
+            /* font-size: 2rem; */
+            font-weight: 600;
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            position: relative;
+            margin-bottom: 1.5rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 0.875rem 1rem 0.875rem 3rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-family: var(--default-font);
+            transition: all 0.3s;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 4px rgba(192, 39, 41, 0.1);
+        }
+
+        .input-group i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-color);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 0.875rem;
+            background: var(--primary-color);
+            color: var(--default-color);
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: 500;
+            font-family: var(--nav-font);
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .login-btn:hover {
+            background: #a32123;
+        }
+
+        .forgot-password {
+            text-align: center;
+            margin-top: 1.25rem;
+        }
+
+        .forgot-password a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-family: var(--nav-font);
+        }
+
+        .forgot-password a:hover {
+            color: var(--primary-color);
+        }
+
+        /* .divider {
+            display: flex;
+            align-items: center;
+            margin: 1.75rem 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #E5E7EB;
+        }
+
+        .divider span {
+            padding: 0 1rem;
+            color: var(--secondary-color);
+            font-size: 0.875rem;
+            font-family: var(--nav-font);
+        }
+
+        .social-login {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .social-btn {
+            padding: 0.75rem 1.25rem;
+            border: 1px solid #E5E7EB;
+            border-radius: 0.5rem;
+            background: var(--default-color);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .social-btn:hover {
+            background: var(--contrast-color);
+            border-color: var(--accent-color);
+        }
+
+        .social-btn i {
+            font-size: 1.5rem;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="login-container" id="loginModal">
+        <div class="logo">
+            <img src="./assets/images/logos/Event.png" alt="EventTribes Logo">
+            <span class="logo-name">Event<span class="logo-name-2nd">Tribes.
+        </div>
+        
+
+        </span>
+            <h4>Welcome Back</h4>
+            <form id="loginForm" onsubmit="return false;">
+                <div class="input-group">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" placeholder="Email address" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="login-btn">Sign In</button>
+                <div class="forgot-password">
+                    <a href="#">Forgot password?</a>
+                </div>
+               <!-- <div class="divider">
+                    <span>or continue with</span>
+                </div>
+                 <div class="social-login">
+                    <button class="social-btn">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button class="social-btn">
+                        <i class="fab fa-facebook"></i>
+                    </button>
+                </div> -->
+            </form>
+    </div>
+</body>
+
+</html>
