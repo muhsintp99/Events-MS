@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description"
         content="EventTribe connects you with top event providers, offering seamless event planning solutions.">
-    <title>Login - EventTribes</title>
+    <title>Login/Register - EventTribes</title>
     <link rel="shortcut icon" href="./assets/images/logos/Event.png" type="image/x-icon">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Poppins:wght@400;500;600&family=Raleway:wght@400;500;600&display=swap"
@@ -74,12 +74,10 @@
             color: var(--heading-color);
         }
 
-
         h4 {
             color: var(--heading-color);
             font-family: var(--heading-font);
             text-align: center;
-            /* font-size: 2rem; */
             font-weight: 600;
             margin-bottom: 2rem;
         }
@@ -113,7 +111,8 @@
             color: var(--secondary-color);
         }
 
-        .login-btn {
+        .login-btn,
+        .register-btn {
             width: 100%;
             padding: 0.875rem;
             background: var(--primary-color);
@@ -127,8 +126,39 @@
             transition: background 0.3s;
         }
 
-        .login-btn:hover {
+        .login-btn:hover,
+        .register-btn:hover {
             background: #a32123;
+        }
+
+        .terms-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .terms-container input[type="checkbox"] {
+            margin-right: 0.75rem;
+        }
+
+        .terms-container a {
+            color: var(--primary-color);
+            text-decoration: none;
+            margin-left: 0.25rem;
+        }
+
+        .form-switch {
+            text-align: center;
+            margin-top: 1.25rem;
+            font-size: 0.875rem;
+            font-family: var(--nav-font);
+        }
+
+        .form-switch a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
         }
 
         .forgot-password {
@@ -147,7 +177,7 @@
             color: var(--primary-color);
         }
 
-        /* .divider {
+        .divider {
             display: flex;
             align-items: center;
             margin: 1.75rem 0;
@@ -190,46 +220,130 @@
 
         .social-btn i {
             font-size: 1.5rem;
-        } */
+        }
+
+        /* Hide/Show form logic */
+        #registerForm {
+            display: none;
+        }
     </style>
 </head>
 
 <body>
-    <div class="login-container" id="loginModal">
+    <div class="login-container" id="authContainer">
         <div class="logo">
             <img src="./assets/images/logos/Event.png" alt="EventTribes Logo">
-            <span class="logo-name">Event<span class="logo-name-2nd">Tribes.
+            <span class="logo-name">Event<span class="logo-name-2nd">Tribes.</span></span>
         </div>
-        
 
-        </span>
+        <!-- Login Form -->
+        <form id="loginForm">
             <h4>Welcome Back</h4>
-            <form id="loginForm" onsubmit="return false;">
-                <div class="input-group">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" placeholder="Email address" required>
-                </div>
-                <div class="input-group">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" placeholder="Password" required>
-                </div>
-                <button type="submit" class="login-btn">Sign In</button>
-                <div class="forgot-password">
-                    <a href="#">Forgot password?</a>
-                </div>
-               <!-- <div class="divider">
-                    <span>or continue with</span>
-                </div>
-                 <div class="social-login">
-                    <button class="social-btn">
-                        <i class="fab fa-google"></i>
-                    </button>
-                    <button class="social-btn">
-                        <i class="fab fa-facebook"></i>
-                    </button>
-                </div> -->
-            </form>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="login-btn">Sign In</button>
+            <div class="forgot-password">
+                <a href="#">Forgot password?</a>
+            </div>
+            <div class="form-switch">
+                Don't have an account? <a href="#" id="showRegister">Register</a>
+            </div>
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+            <div class="social-login">
+                <button class="social-btn">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button class="social-btn">
+                    <i class="fab fa-facebook"></i>
+                </button>
+            </div>
+        </form>
+
+        <!-- Register Form -->
+        <form id="registerForm">
+            <h4>Create Account</h4>
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Full Name" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Email address" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" placeholder="Contact No" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Confirm Password" required>
+            </div>
+            <div class="terms-container">
+                <input type="checkbox" id="termsCheckbox" required>
+                I agree to the <a href="#" id="termsLink">Terms and Conditions</a>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+            <div class="form-switch">
+                Already have an account? <a href="#" id="showLogin">Login</a>
+            </div>
+            <div class="divider">
+                <span>or register with</span>
+            </div>
+            <div class="social-login">
+                <button class="social-btn">
+                    <i class="fab fa-google"></i>
+                </button>
+                <button class="social-btn">
+                    <i class="fab fa-facebook"></i>
+                </button>
+            </div>
+        </form>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loginForm = document.getElementById('loginForm');
+            const registerForm = document.getElementById('registerForm');
+            const showRegisterLink = document.getElementById('showRegister');
+            const showLoginLink = document.getElementById('showLogin');
+
+            showRegisterLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                loginForm.style.display = 'none';
+                registerForm.style.display = 'block';
+            });
+
+            showLoginLink.addEventListener('click', function (e) {
+                e.preventDefault();
+                registerForm.style.display = 'none';
+                loginForm.style.display = 'block';
+            });
+
+            // Optional: Basic form validation for password confirmation
+            const registerBtn = document.querySelector('#registerForm .register-btn');
+            const passwordInputs = registerForm.querySelectorAll('input[type="password"]');
+
+            registerBtn.addEventListener('click', function (e) {
+                if (passwordInputs[1].value !== passwordInputs[2].value) {
+                    alert('Passwords do not match');
+                    e.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -9,13 +9,13 @@
 }
 
 .event-main-card {
-    height: 85vh;
+    height: 84vh;
     overflow: auto;
     scrollbar-width: none;
 }
 
 .Upcoming {
-    height: 53vh;
+    height: 56vh;
     overflow: auto;
     scrollbar-width: none;
 }
